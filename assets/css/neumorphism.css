@@ -1,0 +1,152 @@
+/* Style général en Neumorphisme */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Couleur de fond douce */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Conteneur principal */
+#feed {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Style des posts */
+.post {
+    background: #e0e0e0;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 6px 6px 12px #f7f7f7, -6px -6px 12px #ffffff;
+}
+
+/* Titre du post */
+.post h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+/* Contenu du post */
+.post p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Image du post */
+.post img {
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px #f7f7f7, -5px -5px 10px #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.post img:hover {
+    transform: scale(1.05);
+}
+
+/* Conteneur des boutons de réaction */
+.reactions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Boutons de réaction */
+.reactions button {
+    background: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px #f7f7f7, -3px -3px 6px #ffffff;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Effet au survol des boutons */
+.reactions button:hover {
+    box-shadow: 2px 2px 4px #f7f7f7, -2px -2px 4px #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Conteneur des commentaires */
+.comments {
+    margin-top: 20px;
+}
+
+/* Commentaire individuel */
+.comment {
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px #f7f7f7, -4px -4px 8px #ffffff;
+}
+
+/* Champ de texte pour les commentaires */
+.comments textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 10px;
+    resize: none;
+    box-shadow: inset 2px 2px 5px #f7f7f7, inset -2px -2px 5px #ffffff;
+}
+
+/* Bouton pour ajouter un commentaire */
+.comments button {
+    background: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 8px #f7f7f7, -4px -4px 8px #ffffff;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Effet au survol du bouton "Commenter" */
+.comments button:hover {
+    box-shadow: 2px 2px 4px #f7f7f7, -2px -2px 4px #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Style de la modale d'image plein écran */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Styles des particules de réaction */
+
+.reaction-particle {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 1;
+    animation: reaction-float 1.5s ease-out forwards;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Animation flottante des particules */
+@keyframes reaction-float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100px) scale(0.8);
+        opacity: 0;
+    }
+}

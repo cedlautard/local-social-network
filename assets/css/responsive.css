@@ -1,0 +1,41 @@
+/* Pour les appareils de moins de 768px (tablettes et smartphones) */
+@media (max-width: 768px) {
+    #feed {
+        width: 95%;
+    }
+
+    .post img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .reactions {
+        display: flex;
+        gap: 15rem; /* Augmenter l'espacement entre les boutons */
+        margin-top: 20rem;
+    }
+
+    .comment {
+        margin: 15rem 0; /* Espacement plus important entre les commentaires */
+    }
+
+    .reactions button {
+        flex: 1 1 calc(33% - 10rem);
+    }
+}
+
+/* Pour les très petits écrans (moins de 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .post {
+        padding: 15rem;
+    }
+
+    .reactions button {
+        padding: 8px 10rem;
+    }
+
+}
