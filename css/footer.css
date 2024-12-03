@@ -11,9 +11,11 @@
 
 /* Texte du footer */
 #main-footer p {
-    margin: 0;
+    margin-top: 10px;
     font-size: 0.9rem;
-    color: #666; /* Couleur douce pour que le texte ne soit pas trop marqué */
+    color: #666;
+    padding: 2%;
+    border-top: 1px solid #bebebe; /* Couleur douce pour que le texte ne soit pas trop marqué */
 }
 
 /* Navigation dans le footer */
@@ -39,4 +41,8 @@
 #main-footer nav a:hover {
     box-shadow: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
     transform: translateY(-3px);
+}
+
+footer p{
+ 
 }
