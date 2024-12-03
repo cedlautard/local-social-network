@@ -69,7 +69,7 @@ Le projet est organisé comme suit :
 
 1. **Cloner le Dépôt** :
    ```bash
-   git clone https://github.com/cedlautard/mini-reseau-social.git 
+   git clone https://github.com/cedlautard/local-social-network.git
    ```
 2. **Naviguer dans le Répertoire du Projet** :
    ```bash
