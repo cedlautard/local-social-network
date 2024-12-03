@@ -11,3 +11,13 @@ body {
     display: flex;
     justify-content: center;
 }
+
+button {
+    background-color: rgb(57, 59, 187) !important;
+    color:white;
+}
+
+.message-link {
+    background-color: rgb(57, 59, 187) !important;
+    color:white !important;
+}

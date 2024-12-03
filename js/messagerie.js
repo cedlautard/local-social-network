@@ -9,25 +9,48 @@ const sendMessageButton = document.getElementById("send-message");
 // Afficher les messages d'une conversation
 function displayConversation(conversation) {
     messagesHistory.innerHTML = ""; // Réinitialiser l'historique des messages
+
+    // Parcourir chaque message dans la conversation
     conversation.messages.forEach(message => {
         const messageElement = document.createElement("div");
-        messageElement.className = "message-item";
-        messageElement.style.padding = "10px";
-        messageElement.style.marginBottom = "10px";
+        messageElement.className = message.sender === "me" ? "message-item me" : "message-item other";
+        messageElement.style.display = "flex";
+        messageElement.style.alignItems = "flex-start";
+        messageElement.style.marginBottom = "15px";
 
-        messageElement.innerHTML = `
-            <strong>${message.sender === "me" ? "Vous" : conversation.user}:</strong>
-            <span>${message.content}</span>
-            <span style="float: right; font-size: 0.8rem; color: #777;">${message.timestamp}</span>
+        // Ajouter la photo de profil
+        const profilePic = document.createElement("img");
+        profilePic.className = "profile-pic";
+        profilePic.src = message.sender === "me" ? "assets/img/default.jpg" : conversation.userProfilePic;
+        profilePic.alt = `${message.sender} profile picture`;
+        profilePic.style.width = "100px";
+        profilePic.style.height = "100px";
+        profilePic.style.borderRadius = "50%";
+        profilePic.style.marginRight = "10px";
+
+        // Ajouter le contenu du message
+        const messageContent = document.createElement("div");
+        messageContent.innerHTML = `
+            <strong>${message.sender === "me" ? "Vous" : conversation.user}:</strong><br>
+            <span>${message.content}</span><br>
+            <span class="timestamp" style="font-size: 0.8rem; color: #777;">${message.timestamp}</span>
         `;
+
+        // Ajouter la photo et le message dans l'élément du message
+        messageElement.appendChild(profilePic);
+        messageElement.appendChild(messageContent);
+
+        // Ajouter l'élément du message à l'historique des messages
         messagesHistory.appendChild(messageElement);
     });
 
-    // Garder la conversation en mémoire pour envoyer un nouveau message
-    conversationDetail.dataset.currentConversationIndex = conversations.indexOf(conversation);
     // Scroll automatique vers le bas de l'historique
     messagesHistory.scrollTop = messagesHistory.scrollHeight;
+
+    // Garder la conversation en mémoire pour envoyer un nouveau message
+    conversationDetail.dataset.currentConversationIndex = conversations.indexOf(conversation);
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -41,13 +64,32 @@ document.addEventListener("DOMContentLoaded", function() {
             conversationElement.style.padding = "10px";
             conversationElement.style.marginBottom = "10px";
             conversationElement.style.cursor = "pointer";
+            conversationElement.style.display = "flex";
+            conversationElement.style.alignItems = "flex-start";
+            conversationElement.style.marginBottom = "15px";
+
+             // Ajouter la photo de profil
+            const profilePic = document.createElement("img");
+            profilePic.className = "profile-pic";
+            profilePic.src = conversation.sender === "me" ? "assets/img/default.jpg" : conversation.userProfilePic;
+            profilePic.alt = `${conversation.sender} profile picture`;
+            profilePic.style.width = "100px";
+            profilePic.style.height = "100px";
+            profilePic.style.borderRadius = "50%";
+            profilePic.style.marginRight = "10px";
+
+            
 
             // Ajouter nom de l'utilisateur et le dernier message
             const lastMessage = conversation.messages[conversation.messages.length - 1];
-            conversationElement.innerHTML = `
-                <strong>${conversation.user}</strong><br>
-                <span>${lastMessage.content}</span>
-            `;
+
+            const messageContent = document.createElement("div");
+            
+            messageContent.innerHTML = `<strong>${conversation.user}</strong><br>
+                <span>${lastMessage.content}</span>`;
+            
+            conversationElement.appendChild(profilePic);
+            conversationElement.appendChild(messageContent);
 
             // Ajouter l'événement de clic pour afficher le détail de la conversation
             conversationElement.addEventListener("click", () => {
