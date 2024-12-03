@@ -45,6 +45,14 @@
         flex: 1 1 calc(33% - 10px);
     }
 
+    #friends-section {
+        min-width: 250px !important;
+    }
+
+    #messages-section {
+        min-width: 250px !important;
+    }
+
     #main-footer {
         padding: 15px;
     }

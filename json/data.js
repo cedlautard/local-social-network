@@ -20,10 +20,10 @@ const posts = [
     },
     {
       id: 2,
-      user: "Bob",
-      content: "C'est un beau jour pour une promenade !",
-      imageUrl: "assets/img/randonnee.jpg",
-      reactions: { like: 2, love: 1, dislike: 0 },
+      user: "Albert",
+      content: "Regarder moi ce spectacle !",
+      imageUrl: "assets/img/auroreboreale.jpg",
+      reactions: { like: 6, love: 5, dislike: 0 },
       comments: []
     }
 ];
@@ -44,6 +44,14 @@ const conversations = [
           { sender: "me", content: "Coucou, tu es dispo ce soir ?", timestamp: "18:00" },
           { sender: "Marie", content: "Oui, on peut se voir à 20h ?", timestamp: "18:05" }
       ]
-  }
+  },
+  {
+    user: "Jean",
+    userProfilePic: "images/marie.jpg",
+    messages: [
+        { sender: "me", content: "Hello, ça te dit un bowling ce soir ?", timestamp: "18:00" },
+        { sender: "Jean", content: "je sais pas je suis un peu fatiguée", timestamp: "18:05" }
+    ]
+}
 ];
   

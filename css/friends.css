@@ -5,6 +5,7 @@
     border-radius: 16px;
     box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
     margin: 20px;
+    min-width: 540px;
 }
 
 /* Barre de recherche des amis */

@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
 
+        // Ajouter a la variable globale conversation le nouveau message 
         currentConversation.messages.push(newMessage);
 
         // Mettre à jour l'interface
