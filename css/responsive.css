@@ -1,5 +1,5 @@
 /* Pour les appareils de moins de 768px (tablettes et smartphones) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     body {
         display: block;
@@ -47,6 +47,13 @@
 
     #friends-section {
         min-width: 250px !important;
+    }
+    .friend-item {
+        display: block !important;
+    }
+
+    .profile-pic {
+        margin-bottom: 10px;
     }
 
     #messages-section {
