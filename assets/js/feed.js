@@ -97,6 +97,12 @@ document.addEventListener("DOMContentLoaded", function() {
         commentTextarea.placeholder = "Ajouter un commentaire";
         commentsElement.appendChild(commentTextarea);
 
+        commentTextarea.addEventListener("input", function(event) {
+          if (event.target.value.length > 40) {
+              event.target.value = event.target.value.substring(0, 40);
+          }
+        });
+
         const commentButton = document.createElement("button");
         commentButton.textContent = "Commenter";
 

@@ -53,6 +53,23 @@
         gap: 10px;
         flex-wrap: wrap;
     }
+
+    #messages-section {
+        padding: 15px;
+    }
+
+    #messages-history {
+        max-height: 200px; /* Ajuster pour éviter d'occuper trop d'espace sur mobile */
+    }
+
+    #message-input {
+        width: 100%; /* S'assurer que l'input prend tout l'espace disponible */
+    }
+
+    #send-message {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 /* Pour les très petits écrans (moins de 480px) */

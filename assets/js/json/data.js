@@ -29,12 +29,21 @@ const posts = [
 ];
 
 const conversations = [
-    {
-        user: "David",
-        messages: [
-        { sender: "me", content: "Salut, comment ça va ?", timestamp: "10:30" },
-        { sender: "David", content: "Ça va bien, merci et toi ?", timestamp: "10:32" }
-        ]
-    }
+  {
+      user: "David",
+      userProfilePic: "images/david.jpg",
+      messages: [
+          { sender: "me", content: "Salut, comment ça va ?", timestamp: "10:30" },
+          { sender: "David", content: "Ça va bien, merci et toi ?", timestamp: "10:32" }
+      ]
+  },
+  {
+      user: "Marie",
+      userProfilePic: "images/marie.jpg",
+      messages: [
+          { sender: "me", content: "Coucou, tu es dispo ce soir ?", timestamp: "18:00" },
+          { sender: "Marie", content: "Oui, on peut se voir à 20h ?", timestamp: "18:05" }
+      ]
+  }
 ];
   

@@ -33,13 +33,29 @@
     </main>
 
     <!-- Section de la Messagerie -->
-    <section id="messages-section" class="section hidden">
+    <section id="messages-section" class="section hidden" >
         <h2>Messagerie</h2>
-        <div id="messages-list">
-            <!-- Liste des conversations -->
-            <p>Vous n'avez aucune conversation pour le moment.</p>
+        <!-- Liste des Conversations -->
+        <div id="conversations-list">
+            <h3>Liste des Conversations</h3>
+            <!-- Les conversations seront générées dynamiquement ici -->
+        </div>
+
+        <!-- Détails de la Conversation -->
+        <div id="conversation-detail">
+            <h3>Détails de la Conversation</h3>
+            <!-- L'historique des messages sera affiché ici -->
+            <div id="messages-history">
+                <!-- Messages de la conversation sélectionnée -->
+            </div>
+            <!-- Envoi de Nouveau Message -->
+            <div id="new-message">
+                <textarea id="message-input" rows="3" placeholder="Écrire un nouveau message..."></textarea>
+                <button id="send-message">Envoyer</button>
+            </div>
         </div>
     </section>
+
 
     <!-- Section des amis -->
     <section id="friend-section" class="section hidden">
@@ -59,6 +75,7 @@
     </footer>
     <script src="assets/js/json/data.js"></script>
     <script src="assets/js/feed.js"></script>
+    <script src="assets/js/messagerie.js"></script>
     <script src="assets/js/navigation.js"></script>
 </body>
 
