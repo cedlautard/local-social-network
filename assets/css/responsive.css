@@ -1,5 +1,27 @@
 /* Pour les appareils de moins de 768px (tablettes et smartphones) */
 @media (max-width: 768px) {
+
+    body {
+        display: block;
+        font-size: 0.9rem;
+    }
+
+    #main-header {
+        padding: 15px;
+    }
+
+    #main-header h1 {
+        font-size: 1.5rem;
+    }
+
+    #main-header nav {
+        gap: 10px;
+    }
+
+    #main-header nav a {
+        padding: 8px 15px;
+    }
+
     #feed {
         width: 95%;
     }
@@ -11,31 +33,42 @@
 
     .reactions {
         display: flex;
-        gap: 15rem; /* Augmenter l'espacement entre les boutons */
-        margin-top: 20rem;
+        gap: 15px; /* Augmenter l'espacement entre les boutons */
+        margin-top: 20px;
     }
 
     .comment {
-        margin: 15rem 0; /* Espacement plus important entre les commentaires */
+        margin: 15px 0; /* Espacement plus important entre les commentaires */
     }
 
     .reactions button {
-        flex: 1 1 calc(33% - 10rem);
+        flex: 1 1 calc(33% - 10px);
+    }
+
+    #main-footer {
+        padding: 15px;
+    }
+
+    #main-footer nav {
+        gap: 10px;
+        flex-wrap: wrap;
     }
 }
 
 /* Pour les très petits écrans (moins de 480px) */
 @media (max-width: 480px) {
     body {
+        display: block;
         font-size: 0.9rem;
     }
 
     .post {
-        padding: 15rem;
+        padding: 15px;
     }
 
     .reactions button {
-        padding: 8px 10rem;
+        padding: 8px 10px;
     }
 
 }
+

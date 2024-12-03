@@ -162,8 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Positionner la particule au-dessus du bouton cliqué
         const buttonRect = button.getBoundingClientRect();
-        particle.style.left = `${buttonRect.left + window.scrollX + buttonRect.width / 2}rem`;
-        particle.style.top = `${buttonRect.top + window.scrollY}rem`;
+        particle.style.left = `${buttonRect.left + window.scrollX + buttonRect.width / 2}px`;
+        particle.style.top = `${buttonRect.top + window.scrollY}px`;
 
         // Ajouter la particule au document
         document.body.appendChild(particle);

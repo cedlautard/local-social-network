@@ -4,33 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Réseau Social - Feed</title>
-    <link rel="stylesheet" href="assets/css/neumorphism.css">
+    <title>Mini Réseau Social</title>
+    <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/amis.css">
+    <link rel="stylesheet" href="assets/css/messagerie.css">
+    <link rel="stylesheet" href="assets/css/feed.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <h1>Mini Réseau Social</h1>
         <nav>
-            <a href="index.html">Feed</a> |
-            <a href="messages.html">Messagerie</a> |
-            <a href="amis.html">Liste d'Amis</a>
+            <a href="#" id="feed-link">Feed</a>
+            <a href="#" id="messages-link">Messagerie</a>
+            <a href="#" id="friends-link">Liste d'Amis</a>
         </nav>
     </header>
 
-    <main>
-        <section id="feed" class="section">
-            <h2>Feed</h2>
-           
-        </section>
+    <!-- Section du Feed -->
+    <main id="feed-section" class="section">
+        <!-- Contenu du feed déjà existant -->
+        <div id="feed">
+            <!-- Les posts du feed seront chargés ici -->
+        </div>
     </main>
 
-    <footer class="section">
-        <p>© 2024 Mini Réseau Social</p>
+    <!-- Section de la Messagerie -->
+    <section id="messages-section" class="section hidden">
+        <h2>Messagerie</h2>
+        <div id="messages-list">
+            <!-- Liste des conversations -->
+            <p>Vous n'avez aucune conversation pour le moment.</p>
+        </div>
+    </section>
+
+    <!-- Section des amis -->
+    <section id="friend-section" class="section hidden">
+        <h2>Liste d'amis</h2>
+        <div id="friend-list">
+            
+            <p></p>
+        </div>
+    </section>
+
+    <footer id="main-footer" class="section">
+        <p>© 2024 Mini Réseau Social. Tous droits réservés.</p>
+        <nav>
+            <a href="#">Mentions Légales</a>
+            <a href="#">Contact</a>
+        </nav>
     </footer>
     <script src="assets/js/json/data.js"></script>
     <script src="assets/js/feed.js"></script>
+    <script src="assets/js/navigation.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,23 @@
 const posts = [
     {
-      id: 1,
+      id: 0,
       user: "Alice",
       content: "Voici une photo de mon chat !",
       imageUrl: "assets/img/chat.jpg",
-      reactions: { like: 0, love: 0, dislike: 0 },
+      reactions: { like: 10, love: 5, dislike: 0 },
       comments: [
         { user: "Bob", content: "Adorable !" },
         { user: "Charlie", content: "Trop mignon !" }
       ]
     },
-
+    {
+      id: 1,
+      user: "Bob",
+      content: "C'est un beau jour pour une promenade !",
+      imageUrl: "assets/img/randonnee.jpg",
+      reactions: { like: 2, love: 1, dislike: 1 },
+      comments: []
+    },
     {
       id: 2,
       user: "Bob",

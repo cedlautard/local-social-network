@@ -1,0 +1,62 @@
+/* Style général du header */
+#main-header {
+
+    background: linear-gradient(145deg, #dfe7f0, #f4f4f4); /* Couleur de fond douce */
+    padding: 20px;
+    border-radius: 16px;
+    margin: 20px;
+    max-width: 900px; /* Pour centrer et ne pas avoir un header trop large */
+    box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff; /* Effet de relief */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Titre du site */
+#main-header h1 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #bebebe;
+    padding-bottom: 10px;
+}
+
+/* Style de la navigation */
+#main-header nav {
+    display: flex;
+    gap: 25px;
+}
+
+/* Liens de navigation */
+#main-header nav a {
+    background: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff; /* Relief des liens */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Effet au survol des liens */
+#main-header nav a:hover {
+    box-shadow: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
+    transform: translateY(-3px);
+}
+
+
+nav a {
+    background: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 3px 3px 6px #b8b8b8, -3px -3px 6px #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    box-shadow: 2px 2px 5px #b8b8b8, -2px -2px 5px #ffffff;
+    transform: translateY(-3px);
+}

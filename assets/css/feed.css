@@ -1,11 +1,11 @@
-/* Style général en Neumorphisme */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0e0e0; /* Couleur de fond douce */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+#feed-section {
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+    pointer-events: none; /* Désactive l'interaction avec les éléments cachés */
 }
 
 /* Conteneur principal */
@@ -15,25 +15,36 @@ body {
     margin: 20px auto;
 }
 
+#feed h2 {
+    margin-top: 30px;
+}
+
 /* Style des posts */
 .post {
-    background: #e0e0e0;
+    background: linear-gradient(145deg, #f0f0f3, #d9d9d9);
     border-radius: 16px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 6px 6px 12px #f7f7f7, -6px -6px 12px #ffffff;
+    box-shadow: 9px 9px 16px #b8b8b8, -9px -9px 16px #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.post:hover {
+    box-shadow: 12px 12px 20px #b0b0b0, -12px -12px 20px #ffffff;
+    transform: translateY(-5px);
 }
 
 /* Titre du post */
 .post h3 {
     margin: 0 0 10px;
-    color: #333;
+    color: #222;
 }
 
 /* Contenu du post */
 .post p {
     font-size: 1rem;
-    color: #555;
+    color: #444;
 }
 
 /* Image du post */
