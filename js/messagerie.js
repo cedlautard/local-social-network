@@ -1,11 +1,35 @@
+// Sélection des sections et des éléments
+const messagesSection = document.getElementById("messages-section");
+const conversationsList = document.getElementById("conversations-list");
+const conversationDetail = document.getElementById("conversation-detail");
+const messagesHistory = document.getElementById("messages-history");
+const messageInput = document.getElementById("message-input");
+const sendMessageButton = document.getElementById("send-message");
+
+// Afficher les messages d'une conversation
+function displayConversation(conversation) {
+    messagesHistory.innerHTML = ""; // Réinitialiser l'historique des messages
+    conversation.messages.forEach(message => {
+        const messageElement = document.createElement("div");
+        messageElement.className = "message-item";
+        messageElement.style.padding = "10px";
+        messageElement.style.marginBottom = "10px";
+
+        messageElement.innerHTML = `
+            <strong>${message.sender === "me" ? "Vous" : conversation.user}:</strong>
+            <span>${message.content}</span>
+            <span style="float: right; font-size: 0.8rem; color: #777;">${message.timestamp}</span>
+        `;
+        messagesHistory.appendChild(messageElement);
+    });
+
+    // Garder la conversation en mémoire pour envoyer un nouveau message
+    conversationDetail.dataset.currentConversationIndex = conversations.indexOf(conversation);
+    // Scroll automatique vers le bas de l'historique
+    messagesHistory.scrollTop = messagesHistory.scrollHeight;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Sélection des sections et des éléments
-    const messagesSection = document.getElementById("messages-section");
-    const conversationsList = document.getElementById("conversations-list");
-    const conversationDetail = document.getElementById("conversation-detail");
-    const messagesHistory = document.getElementById("messages-history");
-    const messageInput = document.getElementById("message-input");
-    const sendMessageButton = document.getElementById("send-message");
 
     // Charger les conversations
     function loadConversations() {
@@ -32,31 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
             conversationsList.appendChild(conversationElement);
         });
-    }
-
-    // Afficher les messages d'une conversation
-    function displayConversation(conversation) {
-        console.log(conversation);
-        messagesHistory.innerHTML = ""; // Réinitialiser l'historique des messages
-        conversation.messages.forEach(message => {
-            const messageElement = document.createElement("div");
-            messageElement.className = "message-item";
-            messageElement.style.border = "1px solid black";
-            messageElement.style.padding = "10px";
-            messageElement.style.marginBottom = "10px";
-
-            messageElement.innerHTML = `
-                <strong>${message.sender === "me" ? "Vous" : conversation.user}:</strong>
-                <span>${message.content}</span>
-                <span style="float: right; font-size: 0.8rem; color: #777;">${message.timestamp}</span>
-            `;
-            messagesHistory.appendChild(messageElement);
-        });
-
-        // Garder la conversation en mémoire pour envoyer un nouveau message
-        conversationDetail.dataset.currentConversationIndex = conversations.indexOf(conversation);
-        // Scroll automatique vers le bas de l'historique
-        messagesHistory.scrollTop = messagesHistory.scrollHeight;
     }
 
     // Envoi d'un nouveau message

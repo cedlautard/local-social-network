@@ -87,5 +87,9 @@
         padding: 8px 10px;
     }
 
+    #friends-section {
+        min-width: 250px;
+    }
+
 }
 

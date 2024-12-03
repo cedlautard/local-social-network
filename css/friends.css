@@ -1,0 +1,52 @@
+/* Section des amis */
+#friends-section {
+    padding: 20px;
+    background: #e0e0e0;
+    border-radius: 16px;
+    box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
+    margin: 20px;
+}
+
+/* Barre de recherche des amis */
+#friend-search input {
+    border-radius: 12px;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Élément d'ami */
+.friend-item {
+    background: #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.friend-item:hover {
+    box-shadow: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Lien vers la messagerie */
+.message-link {
+    background: #e0e0e0;
+    padding: 8px 12px;
+    margin-left: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.message-link:hover {
+    box-shadow: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
+    transform: translateY(-3px);
+}

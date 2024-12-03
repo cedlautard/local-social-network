@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Réseau Social</title>
-    <link rel="stylesheet" href="assets/css/general.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/amis.css">
-    <link rel="stylesheet" href="assets/css/messagerie.css">
-    <link rel="stylesheet" href="assets/css/feed.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/friends.css">
+    <link rel="stylesheet" href="css/messagerie.css">
+    <link rel="stylesheet" href="css/feed.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -56,15 +56,36 @@
         </div>
     </section>
 
+    <!-- Section de la Liste d'Amis -->
+    <section id="friends-section" class="section hidden">
+        <h2>Liste d'Amis</h2>
 
-    <!-- Section des amis -->
-    <section id="friend-section" class="section hidden">
-        <h2>Liste d'amis</h2>
-        <div id="friend-list">
-            
-            <p></p>
+        <!-- Barre de Recherche pour Filtrer les Amis -->
+        <div id="friend-search">
+            <input type="text" id="search-input" placeholder="Rechercher un ami..." style="width: calc(100% - 20px); padding: 5px;">
+        </div>
+
+        <!-- Liste d'Amis -->
+        <div id="friends-list">
+            <div class="friend-item" draggable="true" data-name="Alice Dupont">
+                <strong>Alice Dupont</strong>
+                <a href="#" class="message-link">Envoyer un message</a>
+            </div>
+            <div class="friend-item" draggable="true" data-name="Bob Martin">
+                <strong>Bob Martin</strong>
+                <a href="#" class="message-link">Envoyer un message</a>
+            </div>
+            <div class="friend-item" draggable="true" data-name="Charlie Durand">
+                <strong>Charlie Durand</strong>
+                <a href="#" class="message-link">Envoyer un message</a>
+            </div>
+            <div class="friend-item" draggable="true" data-name="David Moreau">
+                <strong>David Moreau</strong>
+                <a href="#" class="message-link">Envoyer un message</a>
+            </div>
         </div>
     </section>
+
 
     <footer id="main-footer" class="section">
         <p>© 2024 Mini Réseau Social. Tous droits réservés.</p>
@@ -73,10 +94,12 @@
             <a href="#">Contact</a>
         </nav>
     </footer>
-    <script src="assets/js/json/data.js"></script>
-    <script src="assets/js/feed.js"></script>
-    <script src="assets/js/messagerie.js"></script>
-    <script src="assets/js/navigation.js"></script>
+    <script src="json/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/feed.js"></script>
+    <script src="js/messagerie.js"></script>
+    <script src="js/friends.js"></script>
+    
 </body>
 
 </html>
