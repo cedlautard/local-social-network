@@ -2,11 +2,11 @@
 #main-footer {
     background: linear-gradient(145deg, #f0f0f3, #d9d9d9);
     padding: 20px;
-    margin: 20px;
     border-radius: 16px;
     box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
     text-align: center;
-    max-width: 900px; /* Alignement et conteneur limité en largeur */
+    max-width: 80%; /* Alignement et conteneur limité en largeur */
+    margin: 20px auto;
 }
 
 /* Texte du footer */

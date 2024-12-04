@@ -4,8 +4,9 @@
     background: #e0e0e0;
     border-radius: 16px;
     box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
-    margin: 20px;
+    margin: 20px auto;
     min-width: 540px;
+    max-width: 60%;
 }
 
 /* Barre de recherche des amis */

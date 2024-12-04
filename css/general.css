@@ -4,11 +4,11 @@ html {
 
 
 body {
+    display:block;
     font-family: Arial, sans-serif;
     background-color: #d3e0ea; /* Couleur de fond douce */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    margin: 20px auto;
 }
 
